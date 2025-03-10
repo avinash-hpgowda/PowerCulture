@@ -1,0 +1,7 @@
+Options +MultiViews
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://http://localhost:8000/$1 [R,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^contact$ contact.php [NC,L]
